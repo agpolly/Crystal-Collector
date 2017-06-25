@@ -34,6 +34,7 @@ sButton= Math.floor(Math.random()*11+1);
 gButton= Math.floor(Math.random()*11+1);
 eButton= Math.floor(Math.random()*11+1);
 scoreTotal = 0;
+$("#score").html(scoreTotal);
 }
 
 //score will increase with each crystal value clicked
