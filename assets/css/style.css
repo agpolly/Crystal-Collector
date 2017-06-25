@@ -27,17 +27,17 @@ body {
 }
 
 #randomNumber {
-	border: red solid 1px;
+	border: red solid 2px;
 	background-color: white;
 }
 
 #gameStats {
-	border: red solid 1px;
+	border: red solid 2px;
 	background-color: white;
 }
 
 .button {
-	border: red solid 1px;
+	border: red solid 2px;
 }
 
 #scoreHeader {

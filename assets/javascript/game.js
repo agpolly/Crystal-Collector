@@ -2,7 +2,6 @@
 //create variables
 var wins = 0;
 var losses = 0;
-var newRandomNumber = null;
 var rButton= Math.floor(Math.random()*11+1);
 var sButton= Math.floor(Math.random()*11+1);
 var gButton= Math.floor(Math.random()*11+1);
@@ -11,12 +10,7 @@ var scoreTotal = 0;
 
 //generate the random number goal and display
 var randomNumber = Math.floor(Math.random() * 101) + 19;
-	$("#randomNumber").html(randomNumber);
-
-var updateRandomNumber = function() {
- 	this.newRandomNumber = Math.floor(Math.random() * 101) + 19;
- 	  console.log(newRandomNumber);
-	};
+  $("#randomNumber").html(randomNumber);
 
 //if the user wins- wins increase- game resets
 function winner() {
@@ -33,11 +27,13 @@ function loser() {
 
 //game reset- new random number displays- new crystal values- score is zero
 function reset() {
-updateRandomNumber();
-var rButton= Math.floor(Math.random()*11+1);
-var sButton= Math.floor(Math.random()*11+1);
-var gButton= Math.floor(Math.random()*11+1);
-var eButton= Math.floor(Math.random()*11+1);
+randomNumber = Math.floor(Math.random() * 101) + 19;
+  $("#randomNumber").html(randomNumber);
+rButton= Math.floor(Math.random()*11+1);
+sButton= Math.floor(Math.random()*11+1);
+gButton= Math.floor(Math.random()*11+1);
+eButton= Math.floor(Math.random()*11+1);
+scoreTotal = 0;
 }
 
 //score will increase with each crystal value clicked
