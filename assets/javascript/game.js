@@ -1,72 +1,92 @@
-//Declare global variables and character objects
 
-//Character objects: Name, HP, Attack, CounterAttack, Location
+//create variables
+var wins = 0;
+var losses = 0;
+var newRandomNumber = null;
+var rButton= Math.floor(Math.random()*11+1);
+var sButton= Math.floor(Math.random()*11+1);
+var gButton= Math.floor(Math.random()*11+1);
+var eButton= Math.floor(Math.random()*11+1);
+var scoreTotal = 0;
 
-//Choose character- Move everyone - click event
+//generate the random number goal and display
+var randomNumber = Math.floor(Math.random() * 101) + 19;
+	$("#randomNumber").html(randomNumber);
 
-//Choose enemy- Move everyone - click event
+var updateRandomNumber = function() {
+ 	this.newRandomNumber = Math.floor(Math.random() * 101) + 19;
+ 	  console.log(newRandomNumber);
+	};
 
-//Attack. generate random numbers and calculate HP - Check for death and move if needed- click event on fight button
-
-//Game over- reset button to start over
-
-var goodGuys {
-
-    goodGuy1 {
-	Name: Harry Potter,
-	HP: ???,
-	Attack: ???,
-	CounterAttack: ???,
-	Location: characters
+//if the user wins- wins increase- game resets
+function winner() {
+  wins++; 
+  $("#wins").html(wins);
+  reset();
+}
+//if user loses- losses increase- game resets
+function loser() {
+  losses++;
+  $("#losses").html(losses);
+  reset();
 }
 
-    goodGuy2 {
-	Name: Ron Weasley,
-	HP: ???,
-	Attack: ???,
-	CounterAttack: ???,
-	Location: characters
+//game reset- new random number displays- new crystal values- score is zero
+function reset() {
+updateRandomNumber();
+var rButton= Math.floor(Math.random()*11+1);
+var sButton= Math.floor(Math.random()*11+1);
+var gButton= Math.floor(Math.random()*11+1);
+var eButton= Math.floor(Math.random()*11+1);
 }
 
-    goodGuy3 {
-	Name: Hermione Granger,
-	HP: ???,
-	Attack: ???,
-	CounterAttack: ???,
-	Location: charaters
-}
-};
+//score will increase with each crystal value clicked
+ $("#rubyButton").on ('click', function(){
+    scoreTotal = scoreTotal + rButton;
+    console.log("New scoreTotal= " + scoreTotal);
+    $("#score").html(scoreTotal); 
 
-var badGuys {
-	badGuy1 {
-		Name: Lord Voldemort,
-		HP: ???,
-		Attack: ???,
-		CounterAttack: ???,
-		Location: enemies
-	}
+//compare score with random number and determine win/loss
+        if (scoreTotal == randomNumber){
+          winner();
+        } else if (scoreTotal > randomNumber){
+          loser();
+        }   
+  });  
 
-		badGuy2 {
-		Name: Dolores Umbridge,
-		HP: ???,
-		Attack: ???,
-		CounterAttack: ???,
-		Location: enemies
-	}
+ //repeat for other crystals
+  $("#saphireButton").on ('click', function(){
+    scoreTotal = scoreTotal + sButton;
+    console.log("New scoreTotal= " + scoreTotal);
+    $("#score").html(scoreTotal); 
 
-		badGuy3 {
-		Name: Bellatrix Lestrange,
-		HP: ???,
-		Attack: ???,
-		CounterAttack: ???,
-		Location: enemies
-	}
-};
+        if (scoreTotal == randomNumber){
+          winner();
+        } else if (scoreTotal > randomNumber){
+          loser();
+        }   
+  }); 
 
-$("goodGuys").click(function(){
-    $("#choices").appendTo("#characters");;
-});
+   $("#gemButton").on ('click', function(){
+    scoreTotal = scoreTotal + gButton;
+    console.log("New scoreTotal= " + scoreTotal);
+    $("#score").html(scoreTotal); 
 
-$("badGuys").click(function(){
-    $("#choices").appendTo("#enemies");;
-});
+        if (scoreTotal == randomNumber){
+          winner();
+        } else if (scoreTotal > randomNumber){
+          loser();
+        }   
+  });
+
+    $("#emeraldButton").on ('click', function(){
+    scoreTotal = scoreTotal + eButton;
+    console.log("New scoreTotal= " + scoreTotal);
+    $("#score").html(scoreTotal); 
+
+        if (scoreTotal == randomNumber){
+          winner();
+        } else if (scoreTotal > randomNumber){
+          loser();
+        }   
+  });

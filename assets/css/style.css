@@ -8,7 +8,7 @@ body {
 }
 
 #directions {
-	text-align: center;
+	padding-left: 40px;
 	font-family: 'Audiowide', cursive;
 }
 
@@ -16,6 +16,9 @@ body {
 	padding-top: 20px;
 	text-align: center;
 	font-family: 'Audiowide', cursive;
+	color: red;
+	font-size: 60px;
+	border-bottom: red solid 2px;
 }
 
 #gameComponents {
@@ -45,6 +48,8 @@ body {
 
 #score {
 	font-family: 'Audiowide', cursive;
-	font-size: 20px;
+	font-size: 40px;
+	color: white;
 	text-align: center;
+	padding-bottom: 200px;
 }
