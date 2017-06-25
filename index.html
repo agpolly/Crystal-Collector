@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="UTF-8">
+
+  <title>Crystals Collector</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row" id="header">
+      <div class="col-md-12"><h1>Crystals Collector!</h1>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row" id="directions">
+    <div class="col-md-12"> 
+      <p>You will be given a random number at the start of the game.</p>
+
+      <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+
+      <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+      <p>The value of each crystal is hidden from you until you click on it.</p>
+
+      <p>Each time the game starts, the game will change the values of each crystal.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row" id="gameComponents">
+    <div class="col-md-4"></div>
+    <div class="col-md-1" id="randomNumber">#</div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2" id="gameStats">
+      <p>Wins: </p>
+      <p>Losses: </p>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+<br>
+
+  <div class="row" id="crystals">
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-2">
+    <img src="assets/images/ruby.jpg" class="img-responsive button" alt="Ruby">
+    </div>
+
+    <div class="col-md-2">
+    <img src="assets/images/saphire.jpg" class="img-responsive button" alt="Saphire">
+    </div>
+
+    <div class="col-md-2">
+    <img src="assets/images/gem.jpg" class="img-responsive button" alt="Gem">
+    </div>
+
+    <div class="col-md-2">
+    <img src="assets/images/emerald.jpg" class="img-responsive button" alt="Emerald">
+    </div>
+  </div>
+
+  <br>
+
+    <div class="row" id="scoreHeader">
+      <div class="col-md-12">Your total score is: </div>
+    </div>
+
+  <br>
+
+   <div class="row" id="score">
+    <div class="col-md-12">Score</div>
+  </div>
+</div>
+
+
+
+</body>
+  <script src="assets/javascript/game.js"></script>
+</html>

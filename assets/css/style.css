@@ -1,0 +1,50 @@
+body {
+	background-image: url(../images/footer_lodyas.png);
+}
+
+.container {
+    background-color: turquoise;
+    border: red solid 2px;
+}
+
+#directions {
+	text-align: center;
+	font-family: 'Audiowide', cursive;
+}
+
+#header {
+	padding-top: 20px;
+	text-align: center;
+	font-family: 'Audiowide', cursive;
+}
+
+#gameComponents {
+	font-family: 'Audiowide', cursive;
+	font-size: 20px;
+}
+
+#randomNumber {
+	border: red solid 1px;
+	background-color: white;
+}
+
+#gameStats {
+	border: red solid 1px;
+	background-color: white;
+}
+
+.button {
+	border: red solid 1px;
+}
+
+#scoreHeader {
+	font-family: 'Audiowide', cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+#score {
+	font-family: 'Audiowide', cursive;
+	font-size: 20px;
+	text-align: center;
+}
